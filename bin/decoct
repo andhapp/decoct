@@ -1,0 +1,14 @@
+app_path = ARGV.first
+
+require File.dirname(__FILE__) + '/../lib'
+require 'dscript'
+
+Dedoct::Dscript.new(app_path)
+Dedoct::Dscript.run
+Dedoct::Dscript.create_lib
+Dedoct::Dscript.create_spec
+Dedoct::Dscript.create_views
+Dedoct::Dscript.create_public
+Dedoct::Dscript.copy_autotest_file
+Dedoct::Dscript.copy_rspec_files
+Dedoct::Dscript.create_app_file
