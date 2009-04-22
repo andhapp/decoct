@@ -3,5 +3,5 @@ app_path = ARGV.first
 $LOAD_PATH.unshift File.dirname(__FILE__) + '/../lib'
 require 'dscript'
 
-dedoct = Dedoct::Dscript.new(app_path)
-dedoct.run
+decoct = Decoct::Dscript.new(app_path)
+decoct.run
