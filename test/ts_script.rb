@@ -6,9 +6,9 @@ class TestScript < Test::Unit::TestCase
     Dir.entries("epoxys").each {|x| [] << x if !File.directory?(x)}       
   end
 
-  context "creating sinatra app with rspec" do
+  context "creating a brand new sinatra-rspec app" do
     setup do
-      @script = Dedoct::Dscript.new('epoxys')
+      @script = Decoct::Dscript.new('epoxys')
       @app_name = @script.app_name
       @script.create_app_dir
     end
@@ -75,13 +75,13 @@ class TestScript < Test::Unit::TestCase
   context "raise exception when app name is nil or empty" do
  
     should 'raise an error if there is no app_name is empty' do
-      assert_raises(RuntimeError) {@script = Dedoct::Dscript.new('')}   
+      assert_raises(RuntimeError) {Decoct::Dscript.new('')}   
     end
 
     should 'raise an error if there is no app_name is nil' do
-      assert_raises(RuntimeError) {@script = Dedoct::Dscript.new(nil)}   
+      assert_raises(RuntimeError) {Decoct::Dscript.new(nil)}   
     end
 
   end
-
+ 
 end

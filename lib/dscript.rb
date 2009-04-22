@@ -1,9 +1,9 @@
 require 'ftools'
 require File.dirname(__FILE__) + '/../lib/dconstants'
 
-module Dedoct
+module Decoct
 
-    include Dedoct::Dconstants
+    include Decoct::Dconstants
     
     # move the creation into a module and just include that module
     class Dscript
@@ -43,17 +43,17 @@ module Dedoct
       end
       
       def copy_autotest_file
-        copy_file("templates/.autotest", "#{app_name}/.autotest") 
+        copy_file(".autotest", "#{app_name}/.autotest") 
       end
       
       def copy_rspec_files
-        copy_file("templates/spec/spec.opts", "#{app_name}/spec/spec.opts")
-        copy_file("templates/spec/rcov.opts", "#{app_name}/spec/rcov.opts")
-        copy_file("templates/spec/spec_helper.rb", "#{app_name}/spec/spec_helper.rb")
+        copy_file("spec/spec.opts", "#{app_name}/spec/spec.opts")
+        copy_file("spec/rcov.opts", "#{app_name}/spec/rcov.opts")
+        copy_file("spec/spec_helper.rb", "#{app_name}/spec/spec_helper.rb")
       end
 
       def create_app_file
-        copy_file("templates/generic_app.rb", "#{app_name}/#{app_name}.rb")        
+        copy_file("generic_app.rb", "#{app_name}/#{app_name}.rb")        
       end
       
       def create_app_dir
@@ -63,13 +63,15 @@ module Dedoct
       private
 
       def create_dir(value = '')
-        Dir.mkdir("#{app_name}/#{value}")  
+        path = "#{app_name}/#{value}"
+        Dir.mkdir(path) if !test(?d, path) 
       end
 
       def copy_file(from, to)
-        File.copy(from, to)
+        File.copy(Dconstants::TEMPLATES + from, to)
       end
 
     end
 
 end
+
