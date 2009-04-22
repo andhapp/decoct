@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{decoct}
-  s.version = "1.1.0"
+  s.version = "1.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Anuj Dutta"]
@@ -27,10 +27,6 @@ Gem::Specification.new do |s|
     "lib/templates/spec/rcov.opts",
     "lib/templates/spec/spec.opts",
     "lib/templates/spec/spec_helper.rb",
-    "test/templates/generic_app.rb",
-    "test/templates/spec/rcov.opts",
-    "test/templates/spec/spec.opts",
-    "test/templates/spec/spec_helper.rb",
     "test/ts_script.rb"
   ]
   s.has_rdoc = true
@@ -40,8 +36,6 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.3.1}
   s.summary = %q{Its a simple gem which creates a project structure for sinatra to work with rspec, ZenTest, Snarl(on Windows), RedGreen, Rcov}
   s.test_files = [
-    "test/templates/generic_app.rb",
-    "test/templates/spec/spec_helper.rb",
     "test/ts_script.rb"
   ]
 
