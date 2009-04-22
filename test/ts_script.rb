@@ -10,7 +10,7 @@ class TestScript < Test::Unit::TestCase
     setup do
       @script = Dedoct::Dscript.new('epoxys')
       @app_name = @script.app_name
-      @script.run
+      @script.create_app_dir
     end
     
     should 'create the app directory' do
