@@ -17,6 +17,7 @@ begin
     gem.add_dependency 'ruby-snarl'
     gem.add_dependency 'redgreen'
     gem.add_dependency 'rcov'
+    gem.add_dependency 'win32console'
   end
 rescue LoadError
   puts "Jeweler not available. Install it with: sudo gem install technicalpickles-jeweler -s http://gems.github.com"
