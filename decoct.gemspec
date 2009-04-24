@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{decoct}
-  s.version = "1.3.0"
+  s.version = "1.4.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Anuj Dutta"]
-  s.date = %q{2009-04-22}
+  s.date = %q{2009-04-24}
   s.default_executable = %q{decoct}
   s.description = %q{Sinatra Rspec project generator}
   s.email = %q{anuj@andhapp.com}
@@ -21,9 +21,11 @@ Gem::Specification.new do |s|
     "bin/decoct",
     "decoct.gemspec",
     "lib/dconstants.rb",
+    "lib/dmeta.rb",
     "lib/dscript.rb",
     "lib/templates/.autotest",
     "lib/templates/generic_app.rb",
+    "lib/templates/spec/app_spec.rb",
     "lib/templates/spec/rcov.opts",
     "lib/templates/spec/spec.opts",
     "lib/templates/spec/spec_helper.rb",
