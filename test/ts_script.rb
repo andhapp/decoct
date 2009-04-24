@@ -18,41 +18,29 @@ class TestScript < Test::Unit::TestCase
     end
 
     should 'create a directory called lib' do
-      initial_num_of_dir = dir_in_app_folder().size() 
       @script.create_lib
-      final_num_of_dir = dir_in_app_folder().size()
-      assert_equal final_num_of_dir, initial_num_of_dir + 1
       assert_not_nil dir_in_app_folder.index("lib") 
     end
     
     should 'create a directory called spec and copy the rspec files' do
-      initial_num_of_dir = dir_in_app_folder().size() 
       @script.create_spec
-      final_num_of_dir = dir_in_app_folder().size()
-
       @script.copy_rspec_files
       
       assert File.exists?("#{@app_name}/spec/spec.opts")
       assert File.exists?("#{@app_name}/spec/rcov.opts")
       assert File.exists?("#{@app_name}/spec/spec_helper.rb")
+      assert File.exists?("#{@app_name}/spec/#{@app_name}_spec.rb")
 
-      assert_equal final_num_of_dir, initial_num_of_dir + 1
       assert_not_nil dir_in_app_folder.index("spec") 
     end
 
     should 'create a directory called views' do
-      initial_num_of_dir = dir_in_app_folder().size() 
       @script.create_views
-      final_num_of_dir = dir_in_app_folder().size() 
-      assert_equal final_num_of_dir, initial_num_of_dir + 1
       assert_not_nil dir_in_app_folder.index("views")
     end
 
     should 'create a directory called public' do
-      initial_num_of_dir = dir_in_app_folder().size() 
       @script.create_public
-      final_num_of_dir = dir_in_app_folder().size() 
-      assert_equal final_num_of_dir, initial_num_of_dir + 1
       assert_not_nil dir_in_app_folder.index("public")
     end
 
@@ -61,8 +49,8 @@ class TestScript < Test::Unit::TestCase
       assert File.exists?("#{@app_name}/.autotest")
     end
 
-    should 'create the app file' do
-      @script.create_app_file
+    should 'copy the app file' do
+      @script.copy_app_file
       assert File.exists?("#{@app_name}/#{@app_name}.rb")
     end
 
