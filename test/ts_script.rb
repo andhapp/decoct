@@ -1,9 +1,10 @@
-%W(test/unit redgreen shoulda rr ../lib/dscript fileutils).each{|x| require x}
+%w(test/unit redgreen shoulda rr fileutils).each{|x| require x}
+require File.join(File.dirname(__FILE__), "..", 'lib', 'dscript')
 
 class TestScript < Test::Unit::TestCase
   
   def dir_in_app_folder
-    Dir.entries("epoxys").each {|x| [] << x if !File.directory?(x)}       
+    Dir.entries("epoxys").each {|x| [] << x if !File.directory?(x)}
   end
 
   context "creating a brand new sinatra-rspec app" do
