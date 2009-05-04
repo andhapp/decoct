@@ -1,5 +1,5 @@
 require 'ftools'
-require File.dirname(__FILE__) + '/../lib/dconstants'
+require File.join(File.dirname(__FILE__), "..", 'lib', 'dconstants')
 
 module Decoct
 	module Dmeta
@@ -21,7 +21,7 @@ module Decoct
 				else
 					attr_reader name
 					define_method("create_#{name}") do
-						path = "#{app_name}/#{name}"
+						path = "#{app_name}#{File::SEPARATOR}#{name}"
 						Dir.mkdir(path) if !test(?d, path)  
 					end
 				end

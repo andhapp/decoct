@@ -27,10 +27,10 @@ class TestScript < Test::Unit::TestCase
       @script.create_spec
       @script.copy_rspec_files
       
-      assert File.exists?("#{@app_name}/spec/spec.opts")
-      assert File.exists?("#{@app_name}/spec/rcov.opts")
-      assert File.exists?("#{@app_name}/spec/spec_helper.rb")
-      assert File.exists?("#{@app_name}/spec/#{@app_name}_spec.rb")
+      assert File.exists?("#{@app_name}#{File::SEPARATOR}spec#{File::SEPARATOR}spec.opts")
+      assert File.exists?("#{@app_name}#{File::SEPARATOR}spec#{File::SEPARATOR}rcov.opts")
+      assert File.exists?("#{@app_name}#{File::SEPARATOR}spec#{File::SEPARATOR}spec_helper.rb")
+      assert File.exists?("#{@app_name}#{File::SEPARATOR}spec#{File::SEPARATOR}#{@app_name}_spec.rb")
 
       assert_not_nil dir_in_app_folder.index("spec") 
     end
@@ -47,12 +47,12 @@ class TestScript < Test::Unit::TestCase
 
     should 'copy the .autotest file to app folder' do
       @script.copy_autotest_file
-      assert File.exists?("#{@app_name}/.autotest")
+      assert File.exists?("#{@app_name}#{File::SEPARATOR}.autotest")
     end
 
     should 'copy the app file' do
       @script.copy_app_file
-      assert File.exists?("#{@app_name}/#{@app_name}.rb")
+      assert File.exists?("#{@app_name}#{File::SEPARATOR}#{@app_name}.rb")
     end
 
     teardown do
