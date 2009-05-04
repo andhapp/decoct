@@ -1,4 +1,6 @@
-%w{spec spec/interop/test sinatra/test}.each {|x| require x}
+require "spec"
+require "spec/interop/test"
+require "sinatra/test"
 
 set :environment, :test
 
