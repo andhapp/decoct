@@ -32,28 +32,17 @@ Decoct is a simple gem that creates a sinatra app directory structure and hooks 
     Assuming that you have installed the gem. Use the command line and go to the directory where you would like to create
     the new project and run the following command:
 
-    <pre>
-    <code>
     decoct {project-name}
-    </code>
-    </pre>
 
     This would create a sinatra project with all the rspec dependencies. If a directory with the same name exists it will 
     overwrite it. Just go into the directory on your command line and run the following command:
 
-    <pre>
-    <code>
     set RSPEC=true autotest
-    </code>
-    </pre>
 
     and finally run the following command:
 
-    <pre>
-    <code>
     autotest
-    </code>
-    </pre>
 
 ## Issues
-    I have spotted one existing issue with it and it is documented here: <a href="http://github.com/andhapp/decoct/issues">Decoct - Issue1</a>
+    I have spotted one existing issue with it and it is documented here: 
+    <a href="http://github.com/andhapp/decoct/issues">Decoct - Issue1</a>
