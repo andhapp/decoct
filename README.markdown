@@ -19,16 +19,16 @@ Dependencies
 -----------
 
 The gem depends on the following libraries:
-* rspec
-* ZenTest
-* ruby-snarl  
-* redgreen
-* rcov
+- rspec
+- ZenTest
+- ruby-snarl  
+- redgreen
+- rcov
 
-Also, in order to use ruby-snarl you should have [Snarl][http://www.fullphat.net/index.php"] installed on 
+Also, in order to use ruby-snarl you should have [Snarl][snarl] installed on 
 your machine. 
 Snarl is a messaging system for windows. This would give you nice visual messages on the status of your tests. 
-[Here's][http://thewebfellas.com/blog/2007/12/10/rspec-autotest-and-snarl-on-windows] a nice article if you
+[Here's][here] a nice article if you
 would like to incorporate that into rails projects. Hence, the caveat above.
 
 
@@ -54,4 +54,8 @@ Issues
 -----
 
 I have spotted one existing issue with it and it is documented here: 
-[Decoct - Issue1][http://github.com/andhapp/decoct/issues].
+[Decoct - Issue1][issue].
+
+[snarl]: http://www.fullphat.net/index.php
+[here]: http://thewebfellas.com/blog/2007/12/10/rspec-autotest-and-snarl-on-windows
+[issue]: http://github.com/andhapp/decoct/issues 
