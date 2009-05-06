@@ -21,9 +21,39 @@ Decoct is a simple gem that creates a sinatra app directory structure and hooks 
     * redgreen
     * rcov
 
-    Also, in order to use ruby-snarl you should have [Snarl](http://www.fullphat.net/index.php) installed on 
+    Also, in order to use ruby-snarl you should have <a href="http://www.fullphat.net/index.php">Snarl</a> installed on 
     your machine. 
     Snarl is a messaging system for windows. This would give you nice visual messages on the status of your tests. 
-    [Here's](http://thewebfellas.com/blog/2007/12/10/rspec-autotest-and-snarl-on-windows) a nice article if you
+    <a href="http://thewebfellas.com/blog/2007/12/10/rspec-autotest-and-snarl-on-windows">Here's</a> a nice article if you
     would like to incorporate that into rails projects. Hence, the caveat above.
 
+## Usage
+    
+    Assuming that you have installed the gem. Use the command line and go to the directory where you would like to create
+    the new project and run the following command:
+
+    <pre>
+    <code>
+    decoct {project-name}
+    </code>
+    </pre>
+
+    This would create a sinatra project with all the rspec dependencies. If a directory with the same name exists it will 
+    overwrite it. Just go into the directory on your command line and run the following command:
+
+    <pre>
+    <code>
+    set RSPEC=true autotest
+    </code>
+    </pre>
+
+    and finally run the following command:
+
+    <pre>
+    <code>
+    autotest
+    </code>
+    </pre>
+
+## Issues
+    I have spotted one existing issue with it and it is documented here: <a href="http://github.com/andhapp/decoct/issues">Decoct - Issue1</a>
