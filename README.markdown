@@ -19,11 +19,12 @@ Dependencies
 -----------
 
 The gem depends on the following libraries:
-- rspec
-- ZenTest
-- ruby-snarl  
-- redgreen
-- rcov
+
+* rspec
+* ZenTest
+* ruby-snarl  
+* redgreen
+* rcov
 
 Also, in order to use ruby-snarl you should have [Snarl][snarl] installed on 
 your machine. 
