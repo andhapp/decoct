@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{decoct}
-  s.version = "1.5.4"
+  s.version = "1.6.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Anuj Dutta"]
@@ -49,20 +49,17 @@ Gem::Specification.new do |s|
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<rspec>, [">= 0"])
       s.add_runtime_dependency(%q<ZenTest>, [">= 0"])
-      s.add_runtime_dependency(%q<growl>, [">= 0"])
       s.add_runtime_dependency(%q<redgreen>, [">= 0"])
       s.add_runtime_dependency(%q<rcov>, [">= 0"])
     else
       s.add_dependency(%q<rspec>, [">= 0"])
       s.add_dependency(%q<ZenTest>, [">= 0"])
-      s.add_dependency(%q<growl>, [">= 0"])
       s.add_dependency(%q<redgreen>, [">= 0"])
       s.add_dependency(%q<rcov>, [">= 0"])
     end
   else
     s.add_dependency(%q<rspec>, [">= 0"])
     s.add_dependency(%q<ZenTest>, [">= 0"])
-    s.add_dependency(%q<growl>, [">= 0"])
     s.add_dependency(%q<redgreen>, [">= 0"])
     s.add_dependency(%q<rcov>, [">= 0"])
   end

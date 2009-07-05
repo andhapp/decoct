@@ -14,7 +14,6 @@ begin
     gem.files.include %w(lib/icons/*.*)
     gem.add_dependency 'rspec'
     gem.add_dependency 'ZenTest'
-    gem.add_dependency 'growl'
     gem.add_dependency 'redgreen'
     gem.add_dependency 'rcov'
   end
