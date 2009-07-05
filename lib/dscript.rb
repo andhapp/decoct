@@ -35,7 +35,7 @@ module Decoct
       def copy_autotest_file
         copy_file(".autotest", "#{app_name}#{File::SEPARATOR}.autotest") 
       end
-      
+
       def copy_rspec_files
 	from = ["spec#{File::SEPARATOR}spec.opts", "spec#{File::SEPARATOR}rcov.opts", "spec#{File::SEPARATOR}spec_helper.rb", "spec#{File::SEPARATOR}app_spec.rb"]
 	to = ["#{app_name}#{File::SEPARATOR}spec#{File::SEPARATOR}spec.opts", "#{app_name}#{File::SEPARATOR}spec#{File::SEPARATOR}rcov.opts", "#{app_name}#{File::SEPARATOR}spec#{File::SEPARATOR}spec_helper.rb", "#{app_name}#{File::SEPARATOR}spec#{File::SEPARATOR}#{app_name}_spec.rb"]
