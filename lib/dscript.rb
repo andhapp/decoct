@@ -8,7 +8,7 @@ module Decoct
 
       attr_accessor :app_name
       
-      create_dir [:lib, :spec, :views, :public]
+      create_dir [:lib, :spec, :views, :public, :icons]
 
       def initialize(app_name)
         fail "app name cannot be nil or empty!!!" if app_name.eql?(nil) || app_name.empty?
@@ -21,9 +21,11 @@ module Decoct
         create_spec
         create_views
         create_public
+        create_icons
         copy_autotest_file
         copy_rspec_files
         copy_app_file
+        copy_icons
       end
       
       def create_app_dir
@@ -42,6 +44,12 @@ module Decoct
 
       def copy_app_file
         copy_file("generic_app.rb", "#{app_name}#{File::SEPARATOR}#{app_name}.rb")
+      end
+      
+      def copy_icons
+        from = ["icons#{File::SEPARATOR}fail.png", "icons#{File::SEPARATOR}ok.png"]
+        to = [ "#{app_name}#{File::SEPARATOR}icons#{File::SEPARATOR}fail.png",  "#{app_name}#{File::SEPARATOR}icons#{File::SEPARATOR}ok.png"]
+        copy_file(from, to)
       end
       
     end

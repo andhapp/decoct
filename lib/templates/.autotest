@@ -1,2 +1,16 @@
-require 'autotest/redgreen'
-require 'autotest/snarl'
+module Autotest::Growl
+  def self.growl title, msg, img, pri=0, stick="" 
+    system "growlnotify -n autotest --image #{img} -p #{pri} -m #{msg.inspect} #{title} #{stick}" 
+  end
+ 
+  Autotest.add_hook :ran_command do |at|
+    puts "at: '#{at.results}'"
+    output = at.results.slice(/(\d+)\s.*specifications?,\s(\d+)\s.*failures?/)
+    puts "out: #{output}"
+    if output =~ /[1-9]\sfailures?/
+      growl "Test Results", "#{output}", '../icons/fail.png', 2 #, "-s" 
+    else
+      growl "Test Results", "#{output}", '../icons/ok.png'
+    end
+  end
+end

@@ -1,4 +1,4 @@
-%w(test/unit redgreen shoulda rr fileutils).each{|x| require x}
+%w(rubygems redgreen test/unit shoulda fileutils).each{|x| require x}
 require File.join(File.dirname(__FILE__), "..", 'lib', 'dscript')
 
 class TestScript < Test::Unit::TestCase
@@ -54,7 +54,14 @@ class TestScript < Test::Unit::TestCase
       @script.copy_app_file
       assert File.exists?("#{@app_name}#{File::SEPARATOR}#{@app_name}.rb")
     end
-
+    
+    should 'copy the icons' do
+      @script.create_icons
+      @script.copy_icons
+      assert File.exists?("#{@app_name}#{File::SEPARATOR}icons#{File::SEPARATOR}fail.png")
+      assert File.exists?("#{@app_name}#{File::SEPARATOR}icons#{File::SEPARATOR}ok.png")
+    end
+    
     teardown do
       FileUtils.rmtree @app_name
     end
@@ -63,11 +70,11 @@ class TestScript < Test::Unit::TestCase
 
   context "raise exception when app name is nil or empty" do
  
-    should 'raise an error if there is no app_name is empty' do
+    should 'raise an error if there is app_name is empty' do
       assert_raises(RuntimeError) {Decoct::Dscript.new('')}   
     end
 
-    should 'raise an error if there is no app_name is nil' do
+    should 'raise an error if there is app_name is nil' do
       assert_raises(RuntimeError) {Decoct::Dscript.new(nil)}   
     end
 
