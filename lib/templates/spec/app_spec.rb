@@ -1,15 +1,15 @@
 require "spec"
 require "spec/interop/test"
-require "sinatra/test"
+require "rack/test"
 
 set :environment, :test
 
 describe 'App' do
-  include Sinatra::Test
+  include Rack::Test::Methods
 
-  it "should pick the spec files for autotest and display error messages with snarl" do
+  it "should pick the spec files for autotest and display error messages with growl" do
     get '/'
-    response.should be_ok
-    response.body.should == 'It works!!!'
+    last_response.should be_ok
+    last_response.body.should == 'It works!!!'
   end
 end
