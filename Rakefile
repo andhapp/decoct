@@ -11,7 +11,6 @@ begin
     gem.homepage = "http://github.com/andhapp/decoct"
     gem.description = "Sinatra Rspec project generator"
     gem.authors = ["Anuj Dutta"]
-    gem.files.include %w(lib/icons/*.*)
     gem.add_dependency 'rspec'
     gem.add_dependency 'ZenTest'
     gem.add_dependency 'redgreen'
