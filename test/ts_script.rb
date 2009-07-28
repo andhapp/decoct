@@ -6,7 +6,7 @@ class TestScript < Test::Unit::TestCase
   def dir_in_app_folder
     Dir.entries("epoxys").each {|x| [] << x if !File.directory?(x)}
   end
-
+  
   context "creating a brand new sinatra-rspec app" do
     setup do
       @script = Decoct::Dscript.new('epoxys')
@@ -79,5 +79,5 @@ class TestScript < Test::Unit::TestCase
     end
 
   end
- 
+  
 end
