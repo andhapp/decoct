@@ -19,10 +19,11 @@ module Decoct
 				if name.is_a?(Array)
 					name.map {|x| create_dir(x)}
 				else
-					attr_reader name
+					#attr_reader name - tests do not break on commenting this out
 					define_method("create_#{name}") do
-						path = "#{app_name}#{File::SEPARATOR}#{name}"
-						Dir.mkdir(path) if !test(?d, path)  
+						path = "#{@app_name}#{File::SEPARATOR}#{name}"
+						Dir.mkdir(path) if !test(?d, path)
+						puts "Created #{path}"  
 					end
 				end
 			end
