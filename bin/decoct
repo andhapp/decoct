@@ -1,7 +1,7 @@
 app_path = ARGV.first
 
 $LOAD_PATH.unshift File.join(File.dirname(__FILE__), "..", 'lib')
-require 'dscript'
+require 'decoct'
 
 decoct = Decoct::Dscript.new(app_path)
 decoct.run

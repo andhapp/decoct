@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{decoct}
-  s.version = "1.9.6"
+  s.version = "1.9.7"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Anuj Dutta"]
-  s.date = %q{2009-07-29}
+  s.date = %q{2009-08-17}
   s.default_executable = %q{decoct}
   s.description = %q{Sinatra Rspec project generator}
   s.email = %q{anuj@andhapp.com}
@@ -20,9 +20,10 @@ Gem::Specification.new do |s|
      "VERSION.yml",
      "bin/decoct",
      "decoct.gemspec",
-     "lib/dconstants.rb",
-     "lib/dmeta.rb",
-     "lib/dscript.rb",
+     "lib/decoct.rb",
+     "lib/decoct/dconstants.rb",
+     "lib/decoct/dmeta.rb",
+     "lib/decoct/dscript.rb",
      "lib/templates/.autotest",
      "lib/templates/generic_app.rb",
      "lib/templates/icons/fail.png",
@@ -31,7 +32,8 @@ Gem::Specification.new do |s|
      "lib/templates/spec/rcov.opts",
      "lib/templates/spec/spec.opts",
      "lib/templates/spec/spec_helper.rb",
-     "test/ts_script.rb"
+     "test/decoct/ts_script.rb",
+     "test/test_helper.rb"
   ]
   s.homepage = %q{http://github.com/andhapp/decoct}
   s.rdoc_options = ["--charset=UTF-8"]
@@ -39,7 +41,8 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.3.4}
   s.summary = %q{Its a simple gem which creates a project structure for sinatra to work with rspec, ZenTest, Growl, RedGreen, Rcov}
   s.test_files = [
-    "test/ts_script.rb"
+    "test/decoct/ts_script.rb",
+     "test/test_helper.rb"
   ]
 
   if s.respond_to? :specification_version then

@@ -1,5 +1,4 @@
-%w(rubygems redgreen test/unit shoulda fileutils).each{|x| require x}
-require File.join(File.dirname(__FILE__), "..", 'lib', 'dscript')
+require File.join(File.dirname(__FILE__), '../test_helper.rb')
 
 class TestScript < Test::Unit::TestCase
   
@@ -32,7 +31,7 @@ class TestScript < Test::Unit::TestCase
       assert File.exists?("#{@app_name}#{File::SEPARATOR}spec#{File::SEPARATOR}spec_helper.rb")
       assert File.exists?("#{@app_name}#{File::SEPARATOR}spec#{File::SEPARATOR}#{@app_name}_spec.rb")
 
-      assert_not_nil dir_in_app_folder.index("spec") 
+      assert_not_nil dir_in_app_folder.index("spec")
     end
 
     should 'create a directory called views' do

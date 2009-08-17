@@ -4,6 +4,6 @@ module Decoct
     VIEWS = 'views'
     SPEC = 'spec'
     PUBLIC = 'public'
-    TEMPLATES = File.join(File.dirname(__FILE__), "..", 'lib', 'templates') + File::SEPARATOR.to_s
+    TEMPLATES = File.join(File.dirname(__FILE__), "..", '..', 'lib', 'templates') + File::SEPARATOR.to_s
   end
 end
