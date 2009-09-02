@@ -32,3 +32,8 @@ This would create a sinatra project with all the rspec dependencies. If a direct
 overwrite it. Just go into the directory on your command line and run the following command:
 
 RSPEC=true autotest
+
+Tests
+---
+
+In order to run the test, please do ruby -rubygems test/decoct/ts_script.rb which makes the test independent of rubygems. 
