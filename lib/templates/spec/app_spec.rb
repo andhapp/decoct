@@ -1,15 +1,6 @@
 %w{spec spec/interop/test rack/test}.each {|x| require x}
 
-set :environment, :test
-
-describe 'App' do
-
-  include Rack::Test::Methods
-  
-  def app
-    Sinatra::Application
-  end
-  
+describe 'App' do  
   it "should pick the spec files for autotest and display error messages with growl" do
     get '/'
     last_response.should be_ok
