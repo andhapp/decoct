@@ -1,13 +1,13 @@
 require 'spec/autorun'
+%w{spec spec/interop/test rack/test}.each {|x| require x}
 
 set :environment, :test
 
 module AppHelper
+  include Rack::Test::Methods
   def app; Sinatra::Application end
 end
 
-include Rack::Test::Methods
-include AppeHelper
-
 Spec::Runner.configure do |config|
+  config.include AppeHelper
 end
