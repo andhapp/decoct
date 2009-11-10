@@ -40,4 +40,4 @@ In order to run the test, please do ruby -rubygems test/decoct/ts_script.rb whic
 
 Roadmap
 ---
-To move the gem to gemcutter.
+To move the gem to gemcutter
