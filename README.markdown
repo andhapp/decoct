@@ -37,3 +37,7 @@ Tests
 ---
 
 In order to run the test, please do ruby -rubygems test/decoct/ts_script.rb which makes the test independent of rubygems. 
+
+Roadmap
+---
+To move the gem to gemcutter.
