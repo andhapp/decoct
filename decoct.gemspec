@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{decoct}
-  s.version = "1.9.9"
+  s.version = "0.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Anuj Dutta"]
-  s.date = %q{2009-09-10}
+  s.date = %q{2009-11-22}
   s.default_executable = %q{decoct}
   s.description = %q{Sinatra Rspec project generator}
   s.email = %q{anuj@andhapp.com}
@@ -20,17 +20,14 @@ Gem::Specification.new do |s|
   s.files = [
     "README.markdown",
      "Rakefile",
-     "VERSION.yml",
+     "VERSION",
      "bin/decoct",
-     "decoct.gemspec",
      "lib/decoct.rb",
      "lib/decoct/dconstants.rb",
      "lib/decoct/dmeta.rb",
      "lib/decoct/dscript.rb",
      "lib/templates/.autotest",
      "lib/templates/generic_app.rb",
-     "lib/templates/icons/fail.png",
-     "lib/templates/icons/ok.png",
      "lib/templates/spec/app_spec.rb",
      "lib/templates/spec/rcov.opts",
      "lib/templates/spec/spec.opts",
@@ -42,7 +39,7 @@ Gem::Specification.new do |s|
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.5}
-  s.summary = %q{Its a simple gem which creates a project structure for sinatra to work with rspec, ZenTest, Growl, RedGreen, Rcov}
+  s.summary = %q{Its a simple gem which creates a project structure for sinatra to work with rspec, ZenTest, RedGreen, Rcov}
   s.test_files = [
     "test/decoct/ts_script.rb",
      "test/test_helper.rb"

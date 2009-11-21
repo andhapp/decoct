@@ -31,6 +31,7 @@ class TestScript < Test::Unit::TestCase
       assert File.exists?("#{@app_name}#{File::SEPARATOR}spec#{File::SEPARATOR}spec_helper.rb")
       assert File.exists?("#{@app_name}#{File::SEPARATOR}spec#{File::SEPARATOR}#{@app_name}_spec.rb")
 
+      assert File.open("#{@app_name}#{File::SEPARATOR}spec#{File::SEPARATOR}spec_helper.rb").readline == "require '#{@script.app_name}'\n"      
       assert_not_nil dir_in_app_folder.index("spec")
     end
 
@@ -53,7 +54,7 @@ class TestScript < Test::Unit::TestCase
       @script.copy_app_file
       assert File.exists?("#{@app_name}#{File::SEPARATOR}#{@app_name}.rb")
     end
-        
+    
     teardown do
       FileUtils.rmtree @app_name
     end

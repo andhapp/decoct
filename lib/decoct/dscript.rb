@@ -38,6 +38,9 @@ module Decoct
 	from = ["spec#{File::SEPARATOR}spec.opts", "spec#{File::SEPARATOR}rcov.opts", "spec#{File::SEPARATOR}spec_helper.rb", "spec#{File::SEPARATOR}app_spec.rb"]
 	to = ["#{app_name}#{File::SEPARATOR}spec#{File::SEPARATOR}spec.opts", "#{app_name}#{File::SEPARATOR}spec#{File::SEPARATOR}rcov.opts", "#{app_name}#{File::SEPARATOR}spec#{File::SEPARATOR}spec_helper.rb", "#{app_name}#{File::SEPARATOR}spec#{File::SEPARATOR}#{app_name}_spec.rb"]
 	copy_file(from, to)
+  
+  file_string = File.open("#{app_name}#{File::SEPARATOR}spec#{File::SEPARATOR}spec_helper.rb") {|f| f.readlines.unshift("require '#{app_name}'\n").join } 
+       File.open("#{app_name}#{File::SEPARATOR}spec#{File::SEPARATOR}spec_helper.rb", "w") {|f| f << file_string}
 	puts "\nCopied rspec files" 
       end
 
