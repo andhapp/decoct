@@ -1,6 +1,4 @@
-require 'spec/autorun'
-
-%w{spec spec/interop/test rack/test}.each {|x| require x}
+%w{spec spec/autorun spec/interop/test rack/test}.each {|x| require x}
 
 set :environment, :test
 

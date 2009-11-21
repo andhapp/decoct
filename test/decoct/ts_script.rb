@@ -6,7 +6,7 @@ class TestScript < Test::Unit::TestCase
     Dir.entries("epoxys").each {|x| [] << x if !File.directory?(x)}
   end
   
-  context "creating a brand new sinatra-rspec app" do
+  context "Creation - sinatra-rspec app" do
     setup do
       @script = Decoct::Dscript.new('epoxys')
       @app_name = @script.app_name
@@ -53,21 +53,14 @@ class TestScript < Test::Unit::TestCase
       @script.copy_app_file
       assert File.exists?("#{@app_name}#{File::SEPARATOR}#{@app_name}.rb")
     end
-    
-    should 'copy the icons' do
-      @script.create_icons
-      @script.copy_icons
-      assert File.exists?("#{@app_name}#{File::SEPARATOR}icons#{File::SEPARATOR}fail.png")
-      assert File.exists?("#{@app_name}#{File::SEPARATOR}icons#{File::SEPARATOR}ok.png")
-    end
-    
+        
     teardown do
       FileUtils.rmtree @app_name
     end
 
   end
 
-  context "raise exception when app name is nil or empty" do
+  context "Exceptions" do
  
     should 'raise an error if there is app_name is empty' do
       assert_raises(RuntimeError) {Decoct::Dscript.new('')}   

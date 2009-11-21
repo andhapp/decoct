@@ -1,6 +1,6 @@
 $LOAD_PATH.unshift File.dirname(__FILE__) + '/../sinatra/lib'
 
-%w{rubygems sinatra}.each {|x| require x}
+%w{sinatra}.each {|x| require x}
 
 get '/' do
   'It works!!!'

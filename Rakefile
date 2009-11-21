@@ -6,7 +6,7 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "decoct"
-    gem.summary = "Its a simple gem which creates a project structure for sinatra to work with rspec, ZenTest, Growl, RedGreen, Rcov"
+    gem.summary = "Its a simple gem which creates a project structure for sinatra to work with rspec, ZenTest, RedGreen, Rcov"
     gem.email = "anuj@andhapp.com"
     gem.homepage = "http://github.com/andhapp/decoct"
     gem.description = "Sinatra Rspec project generator"
@@ -16,6 +16,7 @@ begin
     gem.add_dependency 'redgreen'
     gem.add_dependency 'rcov'
   end
+  Jeweler::GemcutterTasks.new
 rescue LoadError
   puts "Jeweler not available. Install it with: sudo gem install technicalpickles-jeweler -s http://gems.github.com"
 end
