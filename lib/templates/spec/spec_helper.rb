@@ -8,5 +8,5 @@ module AppHelper
 end
 
 Spec::Runner.configure do |config|
-  config.include AppeHelper
+  config.include AppHelper
 end
