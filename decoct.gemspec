@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{decoct}
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Anuj Dutta"]
-  s.date = %q{2009-11-22}
+  s.date = %q{2009-11-26}
   s.default_executable = %q{decoct}
   s.description = %q{Sinatra Rspec project generator}
   s.email = %q{anuj@andhapp.com}
@@ -22,6 +22,7 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "bin/decoct",
+     "decoct.gemspec",
      "lib/decoct.rb",
      "lib/decoct/dconstants.rb",
      "lib/decoct/dmeta.rb",
@@ -32,6 +33,7 @@ Gem::Specification.new do |s|
      "lib/templates/spec/rcov.opts",
      "lib/templates/spec/spec.opts",
      "lib/templates/spec/spec_helper.rb",
+     "pkg/decoct-0.1.0.gem",
      "test/decoct/ts_script.rb",
      "test/test_helper.rb"
   ]
