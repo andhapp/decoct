@@ -6,7 +6,7 @@ Decoct is a simple gem that creates a sinatra app directory structure and hooks 
 Installing
 ---------
 
-Install the gem: sudo gem install andhapp-decoct -s http://gems.github.com (on Mac)
+Install the gem: sudo gem install decoct (on Mac)
 
 Dependencies
 -----------
@@ -18,7 +18,6 @@ The gem depends on the following libraries:
 * redgreen
 * rcov
 
-growl is the Mac OS X messaging system and there are a plethora of articles detailing its installation. Google 'growl Mac OS X' and you would definitely encounter some useful results.
 
 Usage
 ----
@@ -40,4 +39,5 @@ In order to run the test, please do ruby -rubygems test/decoct/ts_script.rb whic
 
 Roadmap
 ---
-To move the gem to gemcutter
+Capistrano recipe to make it easily deployable 
+Add HISTORY file to document the version releases
