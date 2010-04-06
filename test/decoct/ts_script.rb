@@ -6,7 +6,7 @@ class TestScript < Test::Unit::TestCase
     Dir.entries("epoxys").each {|x| [] << x if !File.directory?(x)}
   end
   
-  context "Creation - sinatra-rspec app" do
+  context "On creating a sinatra-rspec app" do
     setup do
       @script = Decoct::Dscript.new('epoxys')
       @app_name = @script.app_name
