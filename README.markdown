@@ -1,7 +1,8 @@
 Decoct: Quick start Sinatra with Rspec
-=====================================
+=======================================
 
-Decoct is a simple gem that creates a sinatra app directory structure and hooks it up with Rspec.
+Decoct is a simple gem that creates a sinatra app directory structure and hooks it up with Rspec. 
+(This project is no longer developed. Have a look at [Padrino](https://github.com/padrino/padrino-framework), if you are looking for something similar and better.)
 
 Installing
 ---------
@@ -38,6 +39,6 @@ Tests
 In order to run the test, please do ruby -rubygems test/decoct/ts_script.rb which makes the test independent of rubygems. 
 
 Roadmap
----
-Capistrano recipe to make it easily deployable 
-Add HISTORY file to document the version releases
+------
+* Capistrano recipe to make it easily deployable 
+* Add HISTORY file to document the version releases
